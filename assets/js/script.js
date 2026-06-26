@@ -10,6 +10,7 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     downloadPDF().then(r => {
         const toastTrigger = document.getElementById('liveToastBtn')
         const toastLiveExample = document.getElementById('liveToast')
+        console.log(r)
 
         if (toastTrigger) {
             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
@@ -25,7 +26,6 @@ function createCard() {
     card.classList.add("card")
     card.classList.add("border-0")
     card.classList.add("mx-auto")
-    // card.classList.add("mt-1")
     return card
 }
 
@@ -70,7 +70,7 @@ function fillEduction(about) {
     education.forEach(value => {
         const card = createCard();
         card.innerHTML = `
-            <div class="card-body">
+            <div class="card-body p-1">
                 <h5 class="card-title">${value.institution}</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">${value.name}</h6>
                 <p class="card-text fw-normal mb-1">Major: ${value.major}</p>
@@ -85,6 +85,7 @@ function getCertifications(certifications) {
     const card = createCard();
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body")
+    cardBody.classList.add("p-1");
     cardBody.innerHTML = `<h5 class="card-title">Certifications</h5>`
     certifications.forEach(certificate => {
 
@@ -106,10 +107,11 @@ function getTechnicalSkills(technicalSkills) {
     const card = createCard()
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body")
+    cardBody.classList.add("p-1");
     cardBody.innerHTML = `<h5 class="card-title">Technical SKills</h5>`
     for (const key in technicalSkills) {
         cardBody.innerHTML += `<h6 class="card-subtitle mb-1 text-body-secondary">${key}</h6>`
-        const skillText = technicalSkills[key].join(" | ")
+        const skillText = technicalSkills[key].join(" • ")
         cardBody.innerHTML += `<p class="card-text fw-lighter">${skillText}</p>`
     }
     card.appendChild(cardBody)
@@ -122,8 +124,8 @@ function getSoftSkills(softSkills) {
     const card = createCard();
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body")
-    cardBody.innerHTML = `<h5 class="card-title">Soft Skills</h5>`
-    cardBody.innerHTML += `<h6 class="card-subtitle mb-1 text-body-secondary">Strong</h6>`
+    cardBody.classList.add("p-1");
+    cardBody.innerHTML = `<h5 class="card-title">Engineering Practices</h5>`
     const innerText = softSkills.join(" &bull; ")
     cardBody.innerHTML += `<p class="card-text fw-lighter">${innerText}</p>`
 
@@ -152,9 +154,9 @@ function getExperience(experience, sectionExperience) {
         const card = createCard();
         const cardBody = document.createElement("div");
         cardBody.classList.add("card-body")
+        cardBody.classList.add("p-1");
         cardBody.innerHTML = `<h5 class="card-title">${title}</h5>`
         cardBody.innerHTML += `<h6 class="card-subtitle mb-2 text-body-secondary">${subtitle}</h6>`
-        cardBody.innerHTML += `<h6 class="card-subtitle mb-2 text-body-secondary">Project</h6>`
 
         const projects = value?.projects
 

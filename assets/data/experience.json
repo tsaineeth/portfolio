@@ -2,19 +2,21 @@
   "experience": [
     {
       "company": "Aera Technology",
-      "role": "Senior Software Engineer 2",
+      "role": "Technical Lead",
       "location": "Remote, India",
       "start_date": "June 2023",
       "end_date": "Present",
       "description": "Built scalable APIs using Flask and FastAPI. Worked on cloud deployment strategies and database optimization for high-load applications.",
       "projects": [
         {
-          "name": "Deployment Manager",
+          "name": "",
           "summary": [
-            "Designed and implemented clean, scalable and modular backend architectures using Flask.",
-            "Developed and maintained RESTful APIs powering high-traffic applications, ensuring maintainability and reusability.",
-            "Led end-to-end feature development from planning to production.",
-            "Ensured code quality through unit/integration tests and code reviews."
+            "Architected and optimized scalable REST APIs using Python, Flask, and FastAPI for a multi tenant SaaS platform serving 2,000+ users, reducing API response times by 25–30% through asynchronous processing and query optimization.",
+            "Designed an AI powered data processing platform that asynchronously generates dimensional data models fromCSV/Excel datasets using LLM integrations.",
+            "Partnered with Product Managers and cross functional teams to transform business requirements into scalable technical solutions by defining architecture, epics, user stories, estimates and sprint plans.",
+            "Leading the design of a Saga based orchestration framework to eliminate partial deployments by coordinating distributed transactions across independently owned services using compensating actions.",
+            "Introduced Test-Driven Development (TDD), increasing automated test coverage to 80%+ and improving overall code quality.",
+            "Mentored 4+ engineers through architecture reviews, code reviews and technical guidance."
           ]
         }
       ],
@@ -32,18 +34,19 @@
     {
       "company": "Amadeus Labs",
       "role": "Software Development Engineer 2",
-      "location": "Bangalore, India",
+      "location": "Bangalore (Hybrid), India",
       "start_date": "May 2021",
       "end_date": "June 2023",
       "description": "Designing, implementing and maintaining scalable backend applications.",
       "projects": [
         {
-          "name": "Connectivity Adaptation Layer",
+          "name": "",
           "summary": [
-            "Developed backend application components by adding new\nfeatures as per requirements.",
-            "Designing and providing scalable solutions to\naccommodate new features.",
-            "Working as an acting Scrum Master by handling scrum\nactivities in the absence of Scrum Master.",
-            "Trained and supervised 3+ employees (freshers and\nexperienced), providing training support/ guidance."
+            "Designed and developed REST APIs and authentication services using Python, Oracle, and Docker for enterprise hospitality integrations.",
+            "Architected and led the development of a new Sabre integration service, enabling interoperability between Amadeus and external hospitality platforms through secure REST based communication.",
+            "Improved software quality by increasing automated test coverage and reducing production defects through comprehensive testing and code reviews.",
+            "Served as Acting Scrum Master, facilitating sprint planning, story estimation and retrospectives.",
+            "Mentored 3+ engineers through technical guidance, code reviews and knowledge sharing."
           ]
         }
       ],
@@ -65,10 +68,12 @@
       "description": "Worked as a Python and Java developer. Enhanced multiple java applications and created automated scripts for use with in the project.",
       "projects": [
         {
-          "name": "Python Automation | Warner Bros.",
+          "name": "",
           "summary": [
-            "Automated daily meeting reports generation. Used python\nmodules such as selenium, openpyxl.",
-            "Automated recon validation for data gathered from 3\ndifferent databases and finding discrepancy."
+            "Transitioned from SAP consulting to backend software engineering within one year, developing automation solutions using Python and Java.",
+            "Developed a report comparison tool to validate report structures across environments, improving consistency and reducing manual verification effort.",
+            "Automated operational reporting workflows using Python, Selenium, and OpenPyXL, reducing manual effort by over 90",
+            "Optimized data reconciliation across multiple enterprise databases to identify inconsistencies and improve reporting, accuracy."
           ]
         }
       ],

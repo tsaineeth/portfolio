@@ -3,53 +3,53 @@
     "Programming Languages": [
       "Python",
       "Java",
-      "C++",
-      "C"
+      "Go"
     ],
-    "Web Technologies": [
+    "Backend": [
       "Flask",
       "FastAPI",
-      "Django",
-      "HTML",
-      "CSS",
-      "JS"
-    ],
-    "Database": [
-      "Oracle",
-      "MySql"
-    ],
-    "Data  Modeling": [
-      "XML",
-      "JSON"
-    ],
-    "Operating System": [
-      "Linux",
-      "Windows",
-      "Mac"
+      "REST APIs",
+      "Microservices",
+      "Async"
     ],
     "AI": [
       "Chat-GPT",
       "Claude"
     ],
-    "Familiar With": [
-      "GIT",
-      "GitHub",
-      "BitBucket",
-      "CI/ CD",
-      "Jenkins",
-      "Jira",
-      "Agile",
-      "Scrum",
+    "Database": [
+      "MySql",
+      "Oracle",
+      "SQLite",
+      "Exasol"
+
+    ],
+    "Cloud & Devops": [
       "Docker",
-      "Temporal"
+      "Kubernetes",
+      "Git",
+      "GitHub",
+      "Jenkins",
+      "CI/CD"
+    ],
+    "Architecture": [
+      "System Design",
+      "Software Architecture",
+      "Distributed Systems",
+      "Design Patterns"
+    ],
+    "Operating System": [
+      "Linux",
+      "Windows",
+      "MacOS"
     ]
   },
   "soft_skills": [
-    "CS fundamentals",
-    "Leadership",
-    "Initiative",
-    "Creativity",
-    "Analytical and Problem Solving Skills"
+    "Technical Leadership",
+    "Technical Analysis",
+    "Code Reviews",
+    "Technical Mentoring",
+    "Cross Functional Collaboration",
+    "Agile/ Scrum"
   ],
   "certifications": [
     {
