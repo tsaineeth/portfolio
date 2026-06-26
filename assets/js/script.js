@@ -26,6 +26,7 @@ function createCard() {
     card.classList.add("card")
     card.classList.add("border-0")
     card.classList.add("mx-auto")
+    // card.classList.add("mt-1")
     return card
 }
 
@@ -35,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(skills => {
             fillSkills(skills)
+        })
+        .catch(error => console.error("Error loading projects:", error));
+
+    fetch('assets/data/technicalHighlights.json')
+        .then(response => response.json())
+        .then(technicalHighlights => {
+            fillTechnicalHighlights(technicalHighlights)
         })
         .catch(error => console.error("Error loading projects:", error));
 
@@ -62,6 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading projects:", error));
 });
 
+function fillTechnicalHighlights(technicalHighlights) {
+    const sectionTechnicalHighlights = document.getElementById('technicalHighlights')
+
+    const personalProjects = technicalHighlights['projects'];
+    const awards = technicalHighlights['awards'];
+
+    sectionTechnicalHighlights.appendChild(getPersonalProjects(personalProjects));
+    sectionTechnicalHighlights.appendChild(getAwards(awards));
+}
+
 function fillEduction(about) {
     const sectionEducation = document.getElementById('education')
     const education = about['education']
@@ -72,9 +90,8 @@ function fillEduction(about) {
         card.innerHTML = `
             <div class="card-body p-1">
                 <h5 class="card-title">${value.institution}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">${value.name}</h6>
-                <p class="card-text fw-normal mb-1">Major: ${value.major}</p>
-                <p class="card-text fw-normal mb-1">Grad: ${value.month} ${value.year} | ${value.location}</p>
+                <h6 class="card-subtitle mb-2 text-body-secondary">${value.name}, ${value.major}</h6>
+                <p class="card-text fw-normal mb-1">${value.year} | ${value.location}</p>
             </div>`;
         sectionEducation.appendChild(card);
     })
@@ -92,9 +109,9 @@ function getCertifications(certifications) {
         const div = document.createElement("div");
         div.classList.add("row")
 
-        div.innerHTML += `<p class="card-text text-body-secondary col-auto">${certificate.year}</p>`
-        div.innerHTML += `<p class="card-text text-body-secondary col-6">${certificate.name}</p>`
-        div.innerHTML += `<p class="card-text text-body-secondary col-auto">${certificate.description}</p>`
+        div.innerHTML += `<p class="card-text fw-normal col-auto">${certificate.year}</p>`
+        div.innerHTML += `<p class="card-text fw-normal col-6">${certificate.name}</p>`
+        div.innerHTML += `<p class="card-text fw-normal col-auto">${certificate.description}</p>`
 
         cardBody.appendChild(div)
     })
@@ -112,7 +129,7 @@ function getTechnicalSkills(technicalSkills) {
     for (const key in technicalSkills) {
         cardBody.innerHTML += `<h6 class="card-subtitle mb-1 text-body-secondary">${key}</h6>`
         const skillText = technicalSkills[key].join(" • ")
-        cardBody.innerHTML += `<p class="card-text fw-lighter">${skillText}</p>`
+        cardBody.innerHTML += `<p class="card-text fw-normal">${skillText}</p>`
     }
     card.appendChild(cardBody)
 
@@ -127,7 +144,7 @@ function getSoftSkills(softSkills) {
     cardBody.classList.add("p-1");
     cardBody.innerHTML = `<h5 class="card-title">Engineering Practices</h5>`
     const innerText = softSkills.join(" &bull; ")
-    cardBody.innerHTML += `<p class="card-text fw-lighter">${innerText}</p>`
+    cardBody.innerHTML += `<p class="card-text fw-normal">${innerText}</p>`
 
     card.appendChild(cardBody)
     return card
@@ -186,31 +203,54 @@ function getExperience(experience, sectionExperience) {
 function getAwards(awards) {
     const card = createCard();
     const cardBody = document.createElement("div");
+    cardBody.innerHTML = `<h5 class="card-title">Awards</h5>`
     cardBody.classList.add("card-body")
+    cardBody.classList.add("p-1");
+    const ul = document.createElement("ul");
+    ul.classList.add("text-body-secondary");
 
 
     awards.forEach(award => {
-        const div = document.createElement("div");
-        div.classList.add("row")
-        div.innerHTML += `<p class="card-text text-body-secondary col-auto">${award.year}</p>`
-        div.innerHTML += `<p class="card-text text-body-secondary col-5">${award.name}</p>`
-        div.innerHTML += `<p class="card-text text-body-secondary col">${award.company}</p>`
-
-        cardBody.appendChild(div)
+        const li = document.createElement("li");
+        li.innerHTML += `${award.name} Award, ${award.company} (${award.year})`
+        ul.appendChild(li)
     })
 
-
+    cardBody.appendChild(ul)
     card.appendChild(cardBody)
     return card
 
 }
 
+function getPersonalProjects(personalProjects) {
+
+    const div = document.createElement("div");
+
+    personalProjects.forEach(project => {
+        const card = createCard();
+        const cardBody = document.createElement("div");
+        cardBody.innerHTML = `<h5 class="card-title">${project.name} | Personal Project</h5>`
+        cardBody.classList.add("card-body")
+        cardBody.classList.add("p-1");
+        const ul = document.createElement("ul");
+        ul.classList.add("text-body-secondary");
+
+        project?.summary.forEach(summary => {
+            const li = document.createElement("li");
+            li.innerHTML += `${summary}`
+            ul.appendChild(li)
+        })
+        cardBody.appendChild(ul)
+        card.appendChild(cardBody)
+        div.appendChild(card)
+    })
+    return div
+}
+
 function fillExperience(experience) {
     const sectionExperience = document.getElementById('experience')
-    const sectionAwards = document.getElementById('awards')
 
     getExperience(experience["experience"], sectionExperience);
-    sectionAwards.appendChild(getAwards(experience["awards"]));
 }
 
 async function downloadPDF() {
@@ -263,6 +303,6 @@ async function downloadPDF() {
     const imgWidth = pdfWidth;
     const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
 
-    pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, imgHeight );
+    pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, imgHeight);
     pdf.save(downloadFileName);
 }

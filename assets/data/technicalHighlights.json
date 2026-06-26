@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "name": "Distributed Transactions Framework",
+      "summary": [
+        "Developed a distributed transaction framework implementing Saga and Two Phase Commit (2PC) patterns across multiple microservices.",
+        "Implemented event driven orchestration, compensating actions, retries and failure recovery to ensure reliable distributed workflows.",
+        "Containerized services with Docker and integrated automated testing, observability and CI/CD pipelines."
+      ],
+      "link": "https://github.com/tsaineeth/distributed-transactions-framework"
+    }
+  ],
+  "awards": [
+    {
+      "company": "Aera Technology",
+      "year": 2024,
+      "name": "Aera Star"
+
+    },
+    {
+      "company": "Amadeus Labs",
+      "year": 2022,
+      "name": "High Flyer"
+
+    },
+    {
+      "company": "HackerRank",
+      "year": 2021,
+      "name": "Python (Basics)"
+
+    },
+    {
+      "company": "Capgemini",
+      "year": 2019,
+      "name": "Rising Star"
+    }
+  ],
+  "competitive_programming": [
+
+  ]
+}

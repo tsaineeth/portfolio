@@ -6,7 +6,6 @@
       "location": "Remote, India",
       "start_date": "June 2023",
       "end_date": "Present",
-      "description": "Built scalable APIs using Flask and FastAPI. Worked on cloud deployment strategies and database optimization for high-load applications.",
       "projects": [
         {
           "name": "",
@@ -37,7 +36,6 @@
       "location": "Bangalore (Hybrid), India",
       "start_date": "May 2021",
       "end_date": "June 2023",
-      "description": "Designing, implementing and maintaining scalable backend applications.",
       "projects": [
         {
           "name": "",
@@ -65,7 +63,6 @@
       "location": "Bangalore, In",
       "start_date": "July 2017",
       "end_date": "May 2021",
-      "description": "Worked as a Python and Java developer. Enhanced multiple java applications and created automated scripts for use with in the project.",
       "projects": [
         {
           "name": "",
@@ -87,31 +84,5 @@
         "Selenium"
       ]
     }
-  ],
-  "awards": [
-    {
-      "company": "Aera Technology",
-      "year": 2024,
-      "name": "Aera Star"
-
-    },
-    {
-      "company": "Amadeus Labs",
-      "year": 2022,
-      "name": "High Flyer"
-
-    },
-    {
-      "company": "HackerRank",
-      "year": 2021,
-      "name": "Python (Basics)"
-
-    },
-    {
-      "company": "Capgemini",
-      "year": 2019,
-      "name": "Rising Star"
-    }
-
   ]
 }

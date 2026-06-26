@@ -2,23 +2,15 @@
   "first_name": "Saineeth",
   "last_name": "Togrikar",
   "title": "Technical Lead | Python",
-  "bio": "Technical Lead with 8+ years of experience building high-performance backend systems using Python, FastAPI, Flask, PostgreSQL, and AWS.\nI specialize in distributed systems, API architecture, database design, and engineering scalable solutions that are reliable, maintainable, and production-ready.",
+  "bio": "Technical Lead with 8+ years of experience building high performance backend systems using Python, FastAPI, Flask, PostgreSQL and AWS.\nI specialize in distributed systems, API architecture, database design and engineering scalable solutions that are reliable, maintainable and production ready.",
   "education": [
     {
       "name": "Bachelor of Technology",
       "major": "Computer Science and Engineering",
-      "institution": "Guru Nanak Institute of Technology",
+      "institution": "Guru Nanak Institute of Technology (JNTU)",
       "year": 2017,
       "month": "June",
-      "location": "Hyderabad"
-    },
-    {
-      "name": "Higher Secondary Education",
-      "major": "Mathematics, Physics and Chemistry (MPC)",
-      "institution": "Narayana Junior College",
-      "year": 2013,
-      "month": "April",
-      "location": "Hyderabad"
+      "location": "Hyderabad, IN"
     }
   ],
   "languages": [
@@ -28,6 +20,6 @@
     "Marathi"
   ],
   "email": "tsaineeth@gmail.com",
-  "linkedin": "https://www.linkedin.com/in/tsaineeth/",
+  "linkedin": "https://www.linkedin.com/in/saineeth-togrikar-a00b73139",
   "github": "https://github.com/tsaineeth"
 }
