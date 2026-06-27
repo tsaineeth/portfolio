@@ -13,8 +13,10 @@
       "Async"
     ],
     "AI": [
-      "Chat-GPT",
-      "Claude"
+      "OpenAI",
+      "Anthropic",
+      "LLM Engineering",
+      "Prompt Engineering"
     ],
     "Database": [
       "MySql",
